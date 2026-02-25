@@ -1,0 +1,40 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">Get A Coctail !</h1>
+        <div class="col-lg-6 mx-auto">
+            
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <form action="/submit" method="GET">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-sm-3">Get</button>
+            </form> 
+        </div>
+        <p class="lead mb-4">
+                <% if(locals.coctailName) { %>
+                <span><%= coctailName %></span>
+                <% } else { %>
+                <span></span>
+                <%}%>
+            </p>
+        </div>
+        <% if(locals.coctailName){ %>
+                <h1>ingredients</h1>
+                <ul class="menu">
+                    <% for(let i = 1; i<= ingredients.length; i++){%>
+                    <li><%= ingredients[i] %></li>
+                    <% } %>
+
+                </ul>
+                <% } %>
+
+                <div class="overflow-hidden" style="max-height: 100vh;">
+                    <div class="container px-5"> <% if(locals.coctailImage){%>
+                        <img src=<%= coctailImage %> class="img-fluid border rounded-3 shadow-lg" alt="Example image"
+                            width="500" height="300" loading="lazy">
+                        <% } %>
+                    </div>
+                </div>
+        </div>
+</body>
+<%- include("footer.ejs") %>

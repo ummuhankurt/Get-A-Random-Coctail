@@ -1,0 +1,29 @@
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1e2a38;
+    /* koyu slate-mavi */
+    letter-spacing: 1px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+span {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 48px;
+    font-weight: 600;
+    color: #3a7bd5;
+    /* background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    border-radius: 40px; */
+
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
